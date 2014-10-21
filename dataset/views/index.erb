@@ -1,0 +1,14 @@
+
+
+<ul>
+	<% @subways.each do |subway| %>
+		<li>
+				<ul>
+				<%= subway.name %>
+					<li>
+				Line: <%= subway.line %>
+					</li>
+				</ul>
+		</li>		
+	<% end %>
+</ul>
