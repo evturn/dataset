@@ -25,11 +25,10 @@ end
 
 get '/profiles' do
 	if session[:current_user]
-		@user = User.find(session[:current_user])
 		@subways = Subway.all
+		erb :'profiles/index'
 	else
 		redirect '/'
-	erb :'profiles/index'
 	end
 end
 
@@ -38,7 +37,7 @@ get '/sessions/new' do
 end
 
 post '/sessions' do
-	user = User.find_by({username: params[:username]})
+	user = User.find_by(username: params[:username])
   if user.password == params[:password]
     session[:current_user] = user.id
     redirect '/profiles'
@@ -49,7 +48,7 @@ end
 
 delete '/sessions' do
 	session[:current_user] = nil
-	redirect 'users/new'
+	redirect '/users/new'
 end
 
 

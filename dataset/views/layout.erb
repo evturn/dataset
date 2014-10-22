@@ -17,10 +17,11 @@
     <form action="/profiles">
       <input type="submit" value ='Profile'>
     </form>
-  <% else %>
-    <a href="/users/new">Join</a>
-    <a href="/sessions/new">Login</a>
-  <% end %>
+    
+	  <% else %>
+	    <a href="/users/new">Join</a>
+	    <a href="/sessions/new">Login</a>
+	  <% end %>
 
 		<h1>SUBWAY ENTRANCES</h1>
 	<%= yield %>
