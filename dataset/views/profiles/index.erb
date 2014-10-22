@@ -1,0 +1,14 @@
+<H2>AND HERE IS ALL THE SUBWAY SHIT</h2>
+
+<ul class="cool">
+	<% @subways.each do |subway| %>
+		<li>
+				<ul>
+				<%= subway.name %>
+					<li>
+				Line: <%= subway.line %>
+					</li>
+				</ul>
+		</li>		
+	<% end %>
+</ul>

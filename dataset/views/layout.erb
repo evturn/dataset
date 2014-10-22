@@ -4,12 +4,26 @@
 	<meta charset="UTF-8">
 	<title>Subway Entrances</title>
 	<link rel="stylesheet" href="/stylesheets/styles.css">
+	<script src="/javascripts/scripts.js"></script>
 </head>
 <body>
-	<script src="/scripts/scripts.js"></script>
 	<center>
+		<% if session[:current_user] %>
+    <form action="/sessions" method='post'>
+      <input type="hidden" name='_method' value='delete'>
+      <input type="submit" value='Log-Out'>
+    </form>
+
+    <form action="/profiles">
+      <input type="submit" value ='Profile'>
+    </form>
+  <% else %>
+    <a href="/users/new">Join</a>
+    <a href="/sessions/new">Login</a>
+  <% end %>
+
 		<h1>SUBWAY ENTRANCES</h1>
+	<%= yield %>
 	</center>
-		<%= yield %>
 </body>
 </html>

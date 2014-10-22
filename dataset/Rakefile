@@ -3,6 +3,7 @@ Bundler.require
 
 require 'sinatra/activerecord/rake'
 require_relative 'connection'
+require_relative 'models/user'
 
 	
 
@@ -14,6 +15,15 @@ namespace :db do
 		conn.close
 	end
 
+  desc 'create junk data'
+  task :junk_data do
+    100.times do
+      user = User.new({username: Faker::Internet.user_name, avatar: Faker::Avatar.image})
+      user.password = Faker::Internet.password
+      user.save
+    end
+  end
+  
 
 	desc "Seed database with the needed Subway Entrances dataset"
   task :load_data do

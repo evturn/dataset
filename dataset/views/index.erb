@@ -1,14 +1,13 @@
 
+<h2>Welcome To An Unreadable List of Subways!</h2>
 
-<ul class="cool">
-	<% @subways.each do |subway| %>
-		<li>
-				<ul>
-				<%= subway.name %>
-					<li>
-				Line: <%= subway.line %>
-					</li>
-				</ul>
-		</li>		
-	<% end %>
-</ul>
+<div class='miniuser-list'>
+  <% @users.each do |user| %>
+    <div class='miniuser'>
+      <p class='username'>
+        <%= user.username %>
+      </p>
+      <img src="<%= user.avatar %>" alt="" />
+    </div>
+  <% end %>
+</div>

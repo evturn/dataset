@@ -1,5 +1,5 @@
 body {
-	/*background-image: url(http://assets.nydailynews.com/polopoly_fs/1.1547577!/img/httpImage/image.jpg_gen/derivatives/article_970/freelance.jpg);*/
+	background-image: url(http://assets.nydailynews.com/polopoly_fs/1.1547577!/img/httpImage/image.jpg_gen/derivatives/article_970/freelance.jpg);
 	font-family: calibri;
 	color: yellow;
 	font-size: 20px;
@@ -8,4 +8,24 @@ body {
 h1 {
 	color: white;
 	font-size: 100px;
+}
+
+.miniuser{
+  display: inline-block;
+  color: white;
+  width: 10em;
+  height: 10em;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+
+.miniuser img{
+  color: white;
+  float: right;
+  width: 7em;
+}
+
+a {
+  color: white;
 }
